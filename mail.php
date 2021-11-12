@@ -26,6 +26,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Письмо не отправлено";
     }
 
+    if ($success1) {
+        // Отдаем 200 код ответа на http запрос
+        http_response_code(200);
+        echo "Письмо отправлено";
+    } else {
+        // Отдаем ошибку с кодом 500 (internal server error).
+        http_response_code(500);
+        echo "Письмо не отправлено";
+    }
 } else {
     // Если это не POST запрос - возвращаем код 403 (действие запрещено)
     http_response_code(403);
