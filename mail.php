@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $reserve = 'перезвонить клиенту по номеру телефона: ' . $call;
     // Первый параметр - кому отправляем письмо, второй - тема письма, третий - содержание
     $success = mail("admin@whitelotus.com", 'Запрос на бронирование spa-процедуры', $content);
-    $success = mail("callme@whitelotus.com", 'Запрос на обратный звонок', $reserve);
+    $success1 = mail("callme@whitelotus.com", 'Запрос на обратный звонок', $reserve);
 
     if ($success) {
         // Отдаем 200 код ответа на http запрос
