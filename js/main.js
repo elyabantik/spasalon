@@ -96,9 +96,9 @@ $().ready(()=>{
         if (call.val()) {
             
             $.ajax({
-                type: 'POST',
-                url: 'mail.php',
-                data: 'call=' + call.val(),
+//                 type: 'POST',
+//                 url: 'mail.php',
+//                 data: 'call=' + call.val(),
                 success: () => {
                     $('#call-decs').hide();
                     $('.reserve-input').hide();
@@ -128,18 +128,18 @@ call.siblings('.reserve-error').show();
         let ritual = $('#ritual');
         let date = $('#date');
         let input = $('.input');
-        // let input1 = $('.reserve-input > select');
+       
 
         input.css('border-color', 'rgb(114, 17, 99)');
         $('.reserve-input select').css('rgb(114, 17, 99)');
-         // input1.css('border-color', 'rgb(114, 17, 99)');
+       
 
         if (name.val() && phone.val() && ritual.val() && date.val()) {
             {
                 $.ajax({
-                    type: 'POST',
-                    url: 'mail.php',
-                    data: 'name=' + name.val() + '&phone=' + phone.val() + '&ritual=' + ritual.val() + '&date=' + date.val(),
+//                     type: 'POST',
+//                     url: 'mail.php',
+//                     data: 'name=' + name.val() + '&phone=' + phone.val() + '&ritual=' + ritual.val() + '&date=' + date.val(),
                     success: () => {
                         $('#thanks-container').show();
                         $('#reservation-content').hide();
@@ -175,22 +175,7 @@ call.siblings('.reserve-error').show();
             date.css('border-color', 'red');
             hasError = true;
         }
-        // else {
-        //
-        //     $.ajax({
-        //         type: 'get',
-        //         url: 'mail.php',
-        //         data: 'name=' + name.val() + '&phone=' + phone.val() + '&ritual=' + ritual.val() + '&date=' + date.val(),
-        //         success: () => {
-        //             $('#thanks-container').show();
-        //             $('#reservation-content').hide();
-        //         },
-        //         error: () => {
-        //             $('#reservation-content').hide();
-        //             alert('Ошибка бронивания. Свяжитесь, пожалуйста, по номеру телефона.')
-        //         },
-        //     })
-        //     }
+  
 
     });
     $('#burger').click(() => {
