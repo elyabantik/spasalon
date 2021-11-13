@@ -100,6 +100,9 @@ $().ready(()=>{
                 url: 'mail.php',
                 data: 'call=' + call.val(),
                 success: () => {
+                    $('#call-decs').hide();
+                    $('.reserve-input').hide();
+                    $('#reserve-button').hide();
                     $('#call-container').show();
                 },
                 error: () => {
