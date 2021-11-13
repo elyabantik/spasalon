@@ -110,9 +110,7 @@ $().ready(()=>{
                     alert('Ошибка бронивания. Свяжитесь, пожалуйста, по номеру телефона.')
                 },
             });
-            
-     
-        
+        }
         else{
 call.siblings('.reserve-error').show();
             call.css('border-color', 'red');
