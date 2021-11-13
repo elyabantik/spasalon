@@ -927,8 +927,7 @@ a {
     border-bottom: 1px solid #721163;
 }
 #thanks-container{
-    
-     display: none;
+    display: none;
     text-align: center;
     margin-top: 195px;
 }
@@ -936,6 +935,7 @@ a {
    display: none;
     text-align: center;
     max-width: 400px;
+    margin: 100px;
 }
 
 .thanks-head{
