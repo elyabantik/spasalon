@@ -96,7 +96,7 @@ $().ready(()=>{
         if (call.val()) {
             {
             $.ajax({
-                type: 'POST',
+                type: 'get',
                 url: 'mail.php',
                 data: 'call=' + call.val(),
                 success: () => {
@@ -139,7 +139,7 @@ $().ready(()=>{
         if (name.val() && phone.val() && ritual.val() && date.val()) {
             {
                 $.ajax({
-                    type: 'POST',
+                    type: 'get',
                     url: 'mail.php',
                     data: 'name=' + name.val() + '&phone=' + phone.val() + '&ritual=' + ritual.val() + '&date=' + date.val(),
                     success: () => {
