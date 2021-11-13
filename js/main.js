@@ -96,8 +96,8 @@ $().ready(()=>{
         if (call.val()) {
             {
             $.ajax({
-                type: 'get',
-                url: 'callme@whitelotus.com',
+                type: 'POST',
+                url: 'mail.php',
                 data: 'call=' + call.val(),
                 success: () => {
                     $('#call-container').show();
@@ -139,7 +139,7 @@ $().ready(()=>{
         if (name.val() && phone.val() && ritual.val() && date.val()) {
             {
                 $.ajax({
-                    type: 'get',
+                    type: 'mail.php',
                     url: 'mail.php',
                     data: 'name=' + name.val() + '&phone=' + phone.val() + '&ritual=' + ritual.val() + '&date=' + date.val(),
                     success: () => {
