@@ -118,7 +118,7 @@ $().ready(()=>{
             call.css('border-color', 'red');
             errorCall = true;
         }
-    })
+    });
 
 
     $('#reservation-btn').click(()=> {
@@ -139,7 +139,7 @@ $().ready(()=>{
         if (name.val() && phone.val() && ritual.val() && date.val()) {
             {
                 $.ajax({
-                    type: 'mail.php',
+                    type: 'POST',
                     url: 'mail.php',
                     data: 'name=' + name.val() + '&phone=' + phone.val() + '&ritual=' + ritual.val() + '&date=' + date.val(),
                     success: () => {
