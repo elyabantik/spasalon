@@ -94,9 +94,9 @@ $().ready(()=>{
         let call = $('#call');
         call.css('border-color', 'rgb(114, 17, 99)');
         if (call.val()) {
-            {
+            
             $.ajax({
-                type: 'get',
+                type: 'POST',
                 url: 'mail.php',
                 data: 'call=' + call.val(),
                 success: () => {
@@ -106,15 +106,12 @@ $().ready(()=>{
                     // $('#reservation-container').hide();
                     alert('Ошибка бронивания. Свяжитесь, пожалуйста, по номеру телефона.')
                 },
-            })
-            }
-            return;
-        }
+            });
+            
+     
+        
         else{
-
-        }
-        if (!call.val()) {
-            call.siblings('.reserve-error').show();
+call.siblings('.reserve-error').show();
             call.css('border-color', 'red');
             errorCall = true;
         }
@@ -139,7 +136,7 @@ $().ready(()=>{
         if (name.val() && phone.val() && ritual.val() && date.val()) {
             {
                 $.ajax({
-                    type: 'get',
+                    type: 'POST',
                     url: 'mail.php',
                     data: 'name=' + name.val() + '&phone=' + phone.val() + '&ritual=' + ritual.val() + '&date=' + date.val(),
                     success: () => {
