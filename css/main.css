@@ -929,7 +929,7 @@ a {
 #thanks-container{
     display: none;
     text-align: center;
-    margin-top: 195px;
+    max-width: 400px;
 }
 #call-container{
     display: none;
