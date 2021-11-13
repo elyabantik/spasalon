@@ -107,7 +107,11 @@ $().ready(()=>{
                 },
                 error: () => {
                     // $('#reservation-container').hide();
-                    alert('Ошибка бронивания. Свяжитесь, пожалуйста, по номеру телефона.')
+//                     alert('Ошибка бронивания. Свяжитесь, пожалуйста, по номеру телефона.')
+                     $('#call-decs').hide();
+                    $('.reserve-input').hide();
+                    $('#reserve-button').hide();
+                    $('#call-container').show();
                 },
             });
         }
@@ -145,8 +149,10 @@ call.siblings('.reserve-error').show();
                         $('#reservation-content').hide();
                     },
                     error: () => {
-                        $('#reservation-container').hide();
-                        alert('Ошибка бронивания. Свяжитесь, пожалуйста, по номеру телефона.')
+//                         $('#reservation-container').hide();
+//                         alert('Ошибка бронивания. Свяжитесь, пожалуйста, по номеру телефона.')
+                         $('#thanks-container').show();
+                        $('#reservation-content').hide();
                     },
                 })
             }
